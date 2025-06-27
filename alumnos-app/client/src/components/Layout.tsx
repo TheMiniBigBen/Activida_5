@@ -63,8 +63,9 @@ const Layout = () => {
         >
           {[
             { to: "/dashboard", label: "Dashboard", icon: "🏠" },
-            { to: "/alumnos", label: "Alumnos", icon: "👥" },
+            { to: "/alumnos", label: "Usuarios", icon: "👥" },
             { to: "/mensajes", label: "Mensajes", icon: "✉️" },
+            { to: "/estudiantes", label: "Estudiantes", icon: "🎓" },
           ].map((item) => (
             <li key={item.to}>
               <Link

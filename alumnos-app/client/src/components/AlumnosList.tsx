@@ -66,7 +66,7 @@ const AlumnosList: React.FC = () => {
       borderRadius: 8,
       boxShadow: '0 4px 10px rgba(0,0,0,0.05)'
     }}>
-      <h2 style={{ color: '#333', marginBottom: 20 }}>Lista de Alumnos</h2>
+      <h2 style={{ color: '#333', marginBottom: 20 }}>Lista de Usuarios</h2>
 
       <div style={{
         marginBottom: 25,
@@ -93,50 +93,7 @@ const AlumnosList: React.FC = () => {
           onBlur={e => e.currentTarget.style.borderColor = '#ccc'}
         />
 
-        <select
-          value={carrera}
-          onChange={e => setCarrera(e.target.value)}
-          style={{
-            padding: 10,
-            borderRadius: 5,
-            border: '1px solid #ccc',
-            fontSize: 16,
-            minWidth: 160,
-            outlineColor: '#4a90e2',
-            cursor: 'pointer',
-            transition: 'border-color 0.3s',
-          }}
-          onFocus={e => e.currentTarget.style.borderColor = '#4a90e2'}
-          onBlur={e => e.currentTarget.style.borderColor = '#ccc'}
-        >
-          <option value="">Todas las carreras</option>
-          <option value="Sistemas">Sistemas</option>
-          <option value="Electrónica">Electrónica</option>
-          <option value="Industrial">Industrial</option>
-          <option value="Civil">Civil</option>
-        </select>
 
-        <select
-          value={semestre}
-          onChange={e => setSemestre(e.target.value)}
-          style={{
-            padding: 10,
-            borderRadius: 5,
-            border: '1px solid #ccc',
-            fontSize: 16,
-            minWidth: 140,
-            outlineColor: '#4a90e2',
-            cursor: 'pointer',
-            transition: 'border-color 0.3s',
-          }}
-          onFocus={e => e.currentTarget.style.borderColor = '#4a90e2'}
-          onBlur={e => e.currentTarget.style.borderColor = '#ccc'}
-        >
-          <option value="">Todos los semestres</option>
-          {[...Array(9)].map((_, i) => (
-            <option key={i + 1} value={`${i + 1}`}>{i + 1}°</option>
-          ))}
-        </select>
       </div>
 
       {error && <p style={{ color: 'red', fontWeight: '600' }}>{error}</p>}
